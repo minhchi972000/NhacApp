@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetStart="@id/center"
+        motion:constraintSetEnd="@+id/end"
+        motion:duration="500">
+        <KeyFrameSet></KeyFrameSet>
+        <OnSwipe
+            motion:dragDirection="dragRight"
+            motion:touchAnchorId="@+id/img_photo"
+            motion:touchAnchorSide="right" />
+    </Transition>
+
+    <Transition
+        motion:constraintSetStart="@id/center"
+        motion:constraintSetEnd="@+id/start"
+        motion:duration="500">
+        <KeyFrameSet></KeyFrameSet>
+        <OnSwipe
+            motion:dragDirection="dragLeft"
+            motion:touchAnchorId="@+id/img_photo"
+            motion:touchAnchorSide="left" />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint
+            android:id="@+id/img_photo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/recyclerView">
+            <CustomAttribute
+                motion:attributeName="saturation"
+                motion:customFloatValue="0" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="50dp"
+            motion:layout_constraintBottom_toTopOf="@id/img_photo"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toTopOf="parent">
+            <CustomAttribute
+                motion:attributeName="saturation"
+                motion:customFloatValue="0" />
+        </Constraint>
+        <Constraint
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_editor_absoluteX="149dp"
+            motion:layout_editor_absoluteY="220dp">
+
+            <CustomAttribute
+                motion:attributeName="textSize"
+                motion:customDimension="15sp"
+
+                />
+        </Constraint>
+
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/center">
+
+        <Constraint
+            android:id="@+id/img_photo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/recyclerView"
+            android:layout_marginLeft="160dp"
+            android:layout_marginStart="160dp">
+            <CustomAttribute
+                motion:attributeName="saturation"
+                motion:customFloatValue="0" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="50dp"
+            motion:layout_constraintBottom_toTopOf="@id/img_photo"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toTopOf="parent">
+            <CustomAttribute
+                motion:attributeName="saturation"
+                motion:customFloatValue="0" />
+        </Constraint>
+        <Constraint
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_editor_absoluteX="149dp"
+            motion:layout_editor_absoluteY="220dp">
+
+            <CustomAttribute
+                motion:attributeName="textSize"
+                motion:customDimension="15sp"
+
+                />
+        </Constraint>
+
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/img_photo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/recyclerView">
+            <CustomAttribute
+                motion:attributeName="saturation"
+                motion:customFloatValue="1" />
+        </Constraint>
+        <Constraint
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="50dp"
+            motion:layout_constraintBottom_toTopOf="@id/img_photo"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toTopOf="parent">
+
+            <CustomAttribute
+                motion:attributeName="saturation"
+                motion:customFloatValue="1" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_editor_absoluteX="149dp"
+            motion:layout_editor_absoluteY="220dp">
+
+            <CustomAttribute
+                motion:attributeName="textSize"
+                motion:customDimension="30sp"
+
+                />
+        </Constraint>
+    </ConstraintSet>
+
+</MotionScene>
